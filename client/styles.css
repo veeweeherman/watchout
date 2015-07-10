@@ -3,3 +3,16 @@
 /* Note: an asteroid image is included in this repo.
 Feel free to use it if you like. */
 
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url("https://animationconfabulation.files.wordpress.com/2014/07/temp2.jpg");
+}
+
+.enemy {
+	border: 100px;
+	border-radius: 30%;
+	background-color: red;
+	background-size: 100px;
+	float: right;
+}
