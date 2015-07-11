@@ -6,8 +6,6 @@ Feel free to use it if you like. */
 body {
 	width: 75%;
 	height: 75%;
-	background-image: url("http://media3.handmadecharlotte.com/wp-content/uploads/2013/09/lamb-cake-12.jpg");
-	background-size: 100%;
 }
 
 .enemy {
@@ -26,9 +24,12 @@ body {
 	float: left;
 }
 
-
-
+svg {
+	background-image: url("http://media3.handmadecharlotte.com/wp-content/uploads/2013/09/lamb-cake-12.jpg");
+	background-size: 100%;
+}
 
 div {
-	margin-left:10px;
+	font-family: "Comic Sans";
+
 }
