@@ -25,11 +25,7 @@ body {
 	background-size: 100px;
 	float: left;
 }
-/*
+
 div {
-	border: 100px;
-	border-radius: 30%;
-	background-color: green;
-	background-size: 100px;
-	float: left;
-}*/
+	margin-left:10px;
+}

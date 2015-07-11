@@ -155,26 +155,28 @@ function getRandomColor() {
 }
 
 var board = d3.select('body').append('svg')
-	.attr('height',1500)
-	.attr('width', 2500)
-
+	.attr('height',2500)
+	.attr('width', 3000)
 
 var circleMaker = function(n){
-	var circles = []
-	for(var i=0;i<n;i++){
-		circles.push(
+	for(var i=0;i<n;i++){	 
 		board.append('circle')
 			.attr('cx', Math.random()*1500)
 			.attr('cy', Math.random()*500)
 			.attr('r', 13)
 			.attr('fill', getRandomColor())
-			)
 	}
-		return circles;
 }
 
+var hero = board.append("svg:image")
+   .attr('x',300)
+   .attr('y',150)
+   .attr('width', 200)
+   .attr('height', 240)
+   .attr("xlink:href","http://www.soloimagenestristes.com/wp-content/uploads/2015/imagenes-de-buenos-dias-snoopy-6.png	")
+
 var villains = circleMaker(50)
-console.log(villains)
+//console.log(villains)
 // setTimeout(function(){
 // 	villains.transition()
 // 	.attr('cx', Math.random()*1500)
@@ -185,14 +187,10 @@ console.log(villains)
 
 var sprinkleShaker = function(){
 	for(var i=0;i<villains.length;i++){
-		d3.selectAll('circle').transition()
+		d3.villains[i][i].transition()
 		.attr('cx', Math.random()*1500)
 		.attr('cy', Math.random()*500)
 	}
 }
 
-
-
-
-
-setInterval(sprinkleShaker, 1000)
+//setInterval(sprinkleShaker, 1000)
