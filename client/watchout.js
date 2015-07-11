@@ -41,15 +41,6 @@ var circleMaker = function(n){
 			// });
 	}
 }
-// to drag "this"
-// need a way to catch cursor position at time of mouseover then send to drag move functon 
-// function dragmove(d) {
-// 	console.log(Array.prototype.slice.call(arguments) )
-// 	console.log(d)
-//   d3.select('.hero')
-//       .attr("x", d.x = Math.max(12, Math.min(width - radius, d3.event.x)))
-//       .attr("y", d.y = Math.max(12, Math.min(height - radius, d3.event.y)));
-//  }
 
 var drag = d3.behavior.drag()
     .on("drag", dragmove);
@@ -74,7 +65,7 @@ var hero = board.append("svg:image")
    .attr('height', 180)
    .attr("xlink:href","http://www.soloimagenestristes.com/wp-content/uploads/2015/imagenes-de-buenos-dias-snoopy-6.png	")
    .attr('class','hero')
-	.on('dragmove', function(){alert("hi")})	
+   .call(drag)
 
 // invocation of circle creater, making 50 circles
 var villains = circleMaker(30)
