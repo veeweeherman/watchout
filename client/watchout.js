@@ -59,8 +59,8 @@ function dragmove(d) {
 	// assigning a class of hero
 	// invoking dragmove function on mouseover event
 var hero = board.append("svg:image")
-   .attr('x', 375)
-   .attr('y', 270)
+   // .attr('x', -25) <--must factor to set cursor at middle of snoopy
+   // .attr('y', -25) <--must factor to set cursor at middle of snoopy
    .attr('width', 150)
    .attr('height', 180)
    .attr("xlink:href","http://www.soloimagenestristes.com/wp-content/uploads/2015/imagenes-de-buenos-dias-snoopy-6.png	")
