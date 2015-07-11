@@ -155,8 +155,8 @@ function getRandomColor() {
 }
 
 var board = d3.select('body').append('svg')
-	.attr('height',2500)
-	.attr('width', 3000)
+	.attr('height',1000)
+	.attr('width', 2000)
 
 var circleMaker = function(n){
 	for(var i=0;i<n;i++){	 
@@ -169,11 +169,26 @@ var circleMaker = function(n){
 }
 
 var hero = board.append("svg:image")
-   .attr('x',300)
-   .attr('y',150)
+   .attr('x',570)
+   .attr('y',250)
    .attr('width', 200)
    .attr('height', 240)
    .attr("xlink:href","http://www.soloimagenestristes.com/wp-content/uploads/2015/imagenes-de-buenos-dias-snoopy-6.png	")
+   .attr('class','hero')
+	.on('mouseover',function() {
+        d3.select(this)
+          .transition()
+          .duration(500)
+          alert('damn Gina!')
+      })
+          // .attr('stroke-width',3) })
+
+   // .on("click", drag)
+
+   // var drag = d3.behavior.drag();
+
+ // function mouseClick(){this.movethefuckoveralert('whattup')};
+
 
 var villains = circleMaker(50)
 //console.log(villains)
