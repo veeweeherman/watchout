@@ -158,8 +158,10 @@ var board = d3.select('body').append('svg')
 	.attr('height',1000)
 	.attr('width', 2000)
 
+var pos = [];
 var circleMaker = function(n){
-	for(var i=0;i<n;i++){	 
+	for(var i=0;i<n;i++){
+		pos.push(i) 
 		board.append('circle')
 			.attr('cx', Math.random()*1500)
 			.attr('cy', Math.random()*500)
@@ -199,13 +201,12 @@ var villains = circleMaker(50)
 // 	.attr('r', 15)
 // },1000)
 
-
 var sprinkleShaker = function(){
-	for(var i=0;i<villains.length;i++){
-		d3.villains[i][i].transition()
-		.attr('cx', Math.random()*1500)
-		.attr('cy', Math.random()*500)
+	d3.selectAll('circle')
+		.data(pos)
+		.transition()
+		.attr('cx', function(d){return d * Math.random() * 100})
+		.attr('cy', function(d){return d * Math.random() * 100	})
 	}
-}
 
-//setInterval(sprinkleShaker, 1000)
+setInterval(sprinkleShaker, 1000)
